@@ -3,7 +3,7 @@
 ?>
 <div class="text-center">
     <p><img src="<?php
-                echo $user->image->target_path;
+                echo $user->image->targetPath;
             ?>" alt="Profile Picture" width="100" height="100" /></p><?php
 
     if ( isset( $user->country ) ) {

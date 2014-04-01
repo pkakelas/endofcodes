@@ -34,8 +34,8 @@
                 'url',
                 'week'
             ];
-            $valid_types = array_flip( $valid_types );
-            return isset( $valid_types[ $type ] );
+            $validTypes = array_flip( $validTypes );
+            return isset( $validTypes[ $type ] );
         }
 
         public function __construct( $resource = '', $method = '' ) {
@@ -43,9 +43,9 @@
             $this->method = $method;
         }
 
-        public function createError( $error_msg ) {
+        public function createError( $errorMsg ) {
             ?><p class="alert alert-danger"><?php
-                echo htmlspecialchars( $error_msg );
+                echo htmlspecialchars( $errorMsg );
             ?></p><?php
         }
 
@@ -89,7 +89,7 @@
             $this->createInput( 'submit', '', '', $value, $attributes );
         }
 
-        public function createSelect( $option_array, $name = '', $selected = '', $id = '', $attributes = '' ) {
+        public function createSelect( $optionArray, $name = '', $selected = '', $id = '', $attributes = '' ) {
             ?><p><select <?php
                 if ( isset( $name ) ) {
                     ?>name="<?php
@@ -110,7 +110,7 @@
                     }
                 }
             ?>><?php
-            foreach ( $option_array as $option ) {
+            foreach ( $optionArray as $option ) {
                 ?><option <?php
                     if ( isset( $option[ 'value' ] ) ) {
                         ?>value="<?php

@@ -158,12 +158,12 @@
         return mysql_affected_rows();
     }
 
-    function dbArray( $sql, $bind = [], $id_column = false ) {
+    function dbArray( $sql, $bind = [], $idColumn = false ) {
         $res = db( $sql, $bind );
         $rows = [];
-        if ( $id_column !== false ) {
+        if ( $idColumn !== false ) {
             while ( $row = mysql_fetch_array( $res ) ) {
-                $rows[ $row[ $id_column ] ] = $row;
+                $rows[ $row[ $idColumn ] ] = $row;
             }
         }
         else {

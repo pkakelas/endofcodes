@@ -8,7 +8,7 @@
             }
             $user = $_SESSION[ 'user' ];
             $userImage = new Image();
-            $userImage->tmp_name = $image[ 'tmp_name' ];
+            $userImage->tmpName = $image[ 'tmpName' ];
             $userImage->name = $image[ 'name' ];
             $userImage->user = $user;
             $user->image = $userImage;
