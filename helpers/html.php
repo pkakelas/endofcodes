@@ -10,7 +10,7 @@
         protected $token;
 
         public static function isValidType( $type ) {
-            $valid_types = [
+            $validTypes = [
                 'button',
                 'checkbox',
                 'color',
